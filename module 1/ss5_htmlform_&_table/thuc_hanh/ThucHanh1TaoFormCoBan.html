@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>SimpleForm.Html</title>
+    <style>
+        Wufoo {
+            font-family: "lucida garander", "Lucida sans uniccode", Tahoma,sans-serif;
+        }
+    </style>
 </head>
 <body>
-   <h1>Tạo Form Cơ Bản</h1>
+
+   <form method="get" action="Simpleform.html">
+       <h2>Oder form</h2>
+       <p>What would you like to buy?</p>
+       <select>
+           <option value="   ">A</option>
+           <OPTION>B (+ 0.5$)</OPTION>
+           <OPTION>C (+ 0.5$)</OPTION>
+       </select>
+       <p>How many would you like to oder?</p>
+       <input type="radio" name="rd"> 1 - 10$ <br/>
+       <input type="radio" name="rd"> 2 - 20$ <br/>
+       <input type="radio" name="rd"> 3 - 25$ <br/>
+       <p> Name <span style="color: red">*</span> </p>
+       <input type="text" name="first name" placeholder="First name" size="15">
+       <input type="text" name="last name" placeholder="Last name" size="15">
+       <p>Email</p>
+       <input type="text" name="email" placeholder="email" size="35">
+       <p>Phone number</p>
+       <input type="number" name="Phone 1" size="5">-
+       <input type="number" name="Phone 2" size="5">-
+       <input type="number" name="Phone 3" size="5">
+       <p><input type="button" name="btsubmit" value="submit"/></p>
+   </form>
 
 </body>
 </html>
