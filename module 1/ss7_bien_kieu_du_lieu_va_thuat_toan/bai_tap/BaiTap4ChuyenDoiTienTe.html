@@ -1,32 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Ứng Dụng Chuyển Đổi Tiền Tệ</title>
 </head>
 <body>
-<form><table>
+<table>
     <tr>
         <td>Amount</td>
         <td>From Currency</td>
         <td>To Currency</td>
     </tr>
     <tr>
-        <td><input type="text"></td>
-        <td><select>
-            <option value="  ">Country</option>
-            <option>VND - Viet Nam</option>
-            <option>USD - USA</option>
-            <option>Ringit - Malaysia</option>
-        <td><select>
-            <option value="  ">Country</option>
-            <option>VND - Viet Nam</option>
-            <option>USD - USA</option>
-            <option>Ringit - Malaysia</option>
+        <td><input id="vao" type="text"></td>
+        <td><select id="from1">
+            <option value="v">VND - Viet Nam</option>
+            <option value="u">USD - USA</option>
+            <option value="r">Ringit - Malaysia</option>
+        <td><select id="from2">
+            <option value="v">VND - Viet Nam</option>
+            <option value="u">USD - USA</option>
+            <option value="r">Ringit - Malaysia</option>
         </select></td>
-        <td><p><input type="button" name="button" value="Convert"></p></td>
+        <td><button onclick="submit()">abc</button></td>
     </tr>
-</table></form>
+</table>
+<p>result:<span id="result"></span></p>
+<script>
+    function submit() {
 
+        let inputValue = document.getElementById('vao').value;
+        let from1 = document.getElementById('from1').value;
+        let from2 = document.getElementById('from2').value;
+        if (from1 == from2){
+            document.getElementById('result').innerHTML=inputValue;
+        }
+        if (from1 =='v' && from2 == 'u') {
+            document.getElementById('result').innerHTML= inputValue / 23000;
+        } //else {
+           // alert(inputValue*23000);
+       // }
+        if (from1 == 'v' && from2 == 'r'){
+            document.getElementById('result').innerHTML=inputValue/5000;
+        }//else {
+           // alert(inputValue/5000);
+        //}
+        if (from1 == 'r' && from2== 'u' ){
+            document.getElementById('result').innerHTML=inputValue/4.19;
+        }//else {
+            //alert(inputValue*4.19);
+        //}
+        if (from1 == 'u' && from2== 'r' ){
+            document.getElementById('result').innerHTML=inputValue*4.19;
+        }
+        if (from1 == 'r' && from2 == 'v'){
+            document.getElementById('result').innerHTML=inputValue*5000;}
+        if (from1 =='u' && from2 == 'v') {
+            document.getElementById('result').innerHTML=inputValue * 23000;}
+
+    }
+</script>
 </body>
 </html>
