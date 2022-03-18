@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MayTinh</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="2"><input id="so1" type="text"></th>
+        <th colspan="2"><input id="so2" type="text"></th>
+    </tr>
+    <tr>
+        <td><button onclick="Addition()">Addition(+)</button></td>
+        <td><button onclick="Subtration()">Subtration(-)</button></td>
+        <td><button onclick="Multiplication()">Multiplication(x)</button></td>
+        <td><button onclick="Division()">Division(x)</button></td>
+    </tr>
+</table>
+<p>Kết quả = <span id="result"></span></p>
+<script>
+    function Addition() {
+        let one = document.getElementById('so1').value;
+        let two = document.getElementById('so2').value;
+        let a = parseInt(one);
+        let b = parseInt(two);
+        document.getElementById('result').innerHTML = a + b;
+
+    }
+    function Subtration() {
+        let one = document.getElementById('so1').value;
+        let two = document.getElementById('so2').value;
+        let a = parseInt(one)
+        let b = parseInt(two)
+        document.getElementById('result').innerHTML = a - b;
+    }
+    function Multiplication() {
+        let one = document.getElementById('so1').value;
+        let two = document.getElementById('so2').value;
+        let a = parseInt(one)
+        let b = parseInt(two)
+        document.getElementById('result').innerHTML = a * b;
+
+    }
+    function Division() {
+        let one = document.getElementById('so1').value;
+        let two = document.getElementById('so2').value;
+        let a = parseInt(one)
+        let b = parseInt(two)
+        document.getElementById('result').innerHTML = a / b;
+
+    }
+</script>
+
+
+</body>
+</html>
