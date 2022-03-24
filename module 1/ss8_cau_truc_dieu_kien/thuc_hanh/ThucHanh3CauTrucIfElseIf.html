@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if...else...if</title>
+</head>
+<body>
+<script>
+    let userName = prompt("Who's there?",' ');
+    if (userName == 'Addmin'){
+        let pass = prompt("Password", ' ');
+        if (pass == 'TheMasster'){
+            alert('Welcome');
+        }else if (pass == null){
+            alert('Cancel');
+        } else {
+            alert('Wrong passworđ');
+        }
+    }else if (userName == null) {
+        alert('cancel');
+    }else {
+        alert('I dont know you');
+    }
+</script>
+</body>
+</html>

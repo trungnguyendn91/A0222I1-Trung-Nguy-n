@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương Trình Bậc 2</title>
+</head>
+<body>
+<script type="text/javascript">
+    let a = prompt(`Enter a `)
+    let b = prompt(`Enter b `)
+    let c = prompt(`Enter c `)
+    let d = (b * b) - (4 * a * c)
+    if(a == 0) {
+        if(b == 0){
+            if (c == 0) {
+                document.write('Phương Trình Vô Số Nghiêm')
+
+            } else{
+                document.write(`Phương Trình Vô Nghiệm`)
+            }
+        } else{
+            document.write('x = '+(-c/b))
+        }
+    } else if (d >= 0) {
+        document.write('x1 = '+ ((-b + Math.sqrt(d)) / (2 * a)));
+        document.write('<br>');
+        document.write(`x2 = `+ ((-b - Math.sqrt(d)) / (2 * a)));
+    } else {
+        document.write('Phương Trình vô nghiệm');
+    }
+</script>
+
+</body>
+</html>

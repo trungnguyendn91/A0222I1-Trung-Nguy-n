@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu Lệnh Switch</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><input id="month" type="text"></td>
+        <td><input type="button" onclick="submit()" value="Submit"/></td>
+    </tr>
+
+</table>
+<p>result:<span id="result"></span></p>
+<script>
+    function submit(){
+        let month = document.getElementById("month").value;
+        switch (month) {
+            case '1':
+            case '7':
+            case '8':
+            case '10':
+            case '12':
+            case '3':
+            case '5':
+                document.getElementById('result').innerHTML = ' 31 ngày';
+                break;
+            case '2':
+                document.getElementById('result').innerHTML = ' 28 hoặc 29 ngày';
+                break;
+            case '4':
+            case '6':
+            case '9':
+            case '11':
+                document.getElementById('result').innerHTML = ' 30 ngày';
+                break;
+            default:
+                document.getElementById('result').innerHTML = ' No';
+        }
+    }
+</script>
+</body>
+</html>

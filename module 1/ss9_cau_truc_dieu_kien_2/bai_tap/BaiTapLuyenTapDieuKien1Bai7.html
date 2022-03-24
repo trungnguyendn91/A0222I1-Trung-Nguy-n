@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tiền Điện Thoại</title>
+</head>
+<body>
+<Script>
+    let a = prompt('số phút gọi');
+    if (a <= 50){
+        b = 25000 + a * 600
+        document.write(' số tiền ' + b);
+    }else if (a <= 200 ){
+        c = 25000 + a * 400 + 30000
+        document.write('số tiền: ' + c);
+    }else {
+        d = 25000 + 30000 + 60000 + a * 200
+        document.write('số tiền:' + d);
+    }
+</Script>
+</body>
+</html>

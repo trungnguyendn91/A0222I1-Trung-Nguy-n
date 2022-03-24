@@ -11,15 +11,15 @@
         <th colspan="2"><input id="so2" type="text"></th>
     </tr>
     <tr>
-        <td><button onclick="Addition()">Addition(+)</button></td>
-        <td><button onclick="Subtration()">Subtration(-)</button></td>
-        <td><button onclick="Multiplication()">Multiplication(x)</button></td>
-        <td><button onclick="Division()">Division(x)</button></td>
+        <td><button onclick="addition()">Addition(+)</button></td>
+        <td><button onclick="subtration()">Subtration(-)</button></td>
+        <td><button onclick="multiplication()">Multiplication(x)</button></td>
+        <td><button onclick="division()">Division(x)</button></td>
     </tr>
 </table>
 <p>Kết quả = <span id="result"></span></p>
 <script>
-    function Addition() {
+    function addition() {
         let one = document.getElementById('so1').value;
         let two = document.getElementById('so2').value;
         let a = parseInt(one);
@@ -27,14 +27,14 @@
         document.getElementById('result').innerHTML = a + b;
 
     }
-    function Subtration() {
+    function subtration() {
         let one = document.getElementById('so1').value;
         let two = document.getElementById('so2').value;
         let a = parseInt(one)
         let b = parseInt(two)
         document.getElementById('result').innerHTML = a - b;
     }
-    function Multiplication() {
+    function multiplication() {
         let one = document.getElementById('so1').value;
         let two = document.getElementById('so2').value;
         let a = parseInt(one)
@@ -42,7 +42,7 @@
         document.getElementById('result').innerHTML = a * b;
 
     }
-    function Division() {
+    function division() {
         let one = document.getElementById('so1').value;
         let two = document.getElementById('so2').value;
         let a = parseInt(one)

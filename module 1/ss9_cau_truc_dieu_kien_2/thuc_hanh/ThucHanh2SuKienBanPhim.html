@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nobita</title>
+</head>
+<body>
+
+<form>
+<img id="nobita" src="../hinh_anh/nobita.png" style="position:absolute;left:0; top:0;" height="100" width="80"/>
+</form>
+<Script>
+    function upArrowPressed() {  // hàm di chuyển lên trên khi nhấn phím lên
+        let element = document.getElementById("nobita");
+        element.style.top = parseInt(element.style.top) - 5 + 'px';
+    }
+    function downArrowPressed() { // hàm di chuyển xuống khi nhấn phím xuống
+        let element = document.getElementById("nobita")
+        element.style.top = parseInt(element.style.top) +5 + 'px';
+    }
+    function leftArrowPressed() { // hàm di chuyển khi nhấn phím sang trái
+        let element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) - 5 + 'px';
+    }
+    function rightArrowPressed() { // hàm di chuyển khi nhấn phím sang phải
+        let element = document.getElementById("nobita");
+        element.style.left = parseInt(element.style.left) + 5 + 'px';
+
+    }
+    function moveSelection(evt) { //(hàm nhận phím)
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 38:
+                upArrowPressed();
+                break;
+            case 40:
+                downArrowPressed();
+                break;
+        }
+    }
+    function docReady() { //Hàm sẵn sang làm việc
+        window.addEventListener('keydown', moveSelection);
+    }
+    window.onload = docReady() //gọi hàm sẵn sàng làm việc
+</Script>
+
+</body>
+</html>

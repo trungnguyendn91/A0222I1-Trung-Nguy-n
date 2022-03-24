@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Tiền Điện</title>
+</head>
+<body>
+<p>Tiền thuê bao điện kế: 1000đ/tháng <br> <br>
+
+    Định mức sử dụng điện cho mỗi hộ là: 50 KW với giá 230đ/KW <br> <br>
+
+    Nếu phần vượt định mức <= 50KW thì tính giá 480đ/KW <br> <br>
+
+    Nếu 50KW < phần vượt định mức <= 100KW thì tính giá 700đ/KW <br> <br>
+
+    Nếu phần vượt định mức > 100KW thì tính giá 900đ/KW</p> <br>
+
+<table>
+    <tr>
+        <td><input id="k" type="text"></td>
+        <td><input type="button" onclick="submit()" value="Submit"/></td>
+    </tr>
+
+</table>
+<p>Kết quả: <span id="kết quả"></span></p>
+<br>
+<script>
+    function submit() {
+    let a = document.getElementById("k").value;
+    if (a<50){
+        b = a * 230 + 1000
+        document.getElementById("kết quả").innerHTML= 'Tổng tiền điện là: ' + b + 'vnd';
+    }else if( a <= 100){
+        c = (230*50) + ((a-50)*480) +1000;
+        document.getElementById("kết quả").innerHTML='Tổng tiền điện là: ' + c +'vnd';
+    }else if ( a <200){
+        d = (230*50) + (480*50) + ((a-100)*700) + 1000;
+        document.getElementById("kết quả").innerHTML= 'Tông tiền điện là: ' + d +'vnd';
+    }else {
+        e = (230*50) + (480*50) + (700*100) + ((a-200)*900) + 1000;
+        document.getElementById("kết quả").innerHTML= 'Tổn tiền điện là: ' + e + 'vnd';
+
+    }}
+</script>
+
+</body>
+</html>

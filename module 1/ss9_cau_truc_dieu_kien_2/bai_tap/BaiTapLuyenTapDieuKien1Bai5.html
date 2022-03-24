@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Học lực</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt('điểm kiểm tra'));
+    let b = parseFloat(prompt('điểm giữa kỳ'));
+    let c = parseFloat(prompt('điểm cuối kỳ'));
+    d = (a + b*2 + c*3) / 6
+    if (d >= 8.5 ){
+        document.write("giỏi");
+    } else  if (d >= 6.5){
+        document.write("khá");
+    }else if (d >= 4.5){
+        document.write( "trung binh");
+    }else {
+        document.write("yếu");
+    }
+</script>
+
+</body>
+</html>
