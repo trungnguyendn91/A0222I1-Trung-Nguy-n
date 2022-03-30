@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng 20 số đầu tiên trong dãy Fibonacci</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('Nhập số fibonacci cần hiển thị'));
+    let a = 1;
+    let b = 1;
+    let output = " ";
+    let total = 0
+    for ( let i = 1; i<=n;i++){
+        if(i==1 || i==2){
+            output += '1'+ ' ';
+            a = 1;
+            b = 1;
+            total += a;
+            continue;
+        }
+        let c = a + b;
+        output += " " + c + ' ';
+        a = b;
+        b = c;
+        total += c;
+    }
+    document.write(output);
+    document.write( "<br>"+'tong =' + total);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Số fibonacci chia hết cho 5</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('Nhập số fibonacci cần hiển thị'));
+    let a = 1;
+    let b = 1;
+    let d = " ";
+       while (d%5 ==0){
+           for (let i = 1; i <= n; i++) {
+           if (i == 1 || i == 2) {
+               d += '1' + ' ';
+               a = 1;
+               b = 1;
+               continue;
+           }
+           let c = a + b;
+           a = b;
+           b = c
+               if(c%5 != 0){
+                   continue
+               }document.write(" " + c)
+       }
+   }
+</script>
+</body>
+</html>

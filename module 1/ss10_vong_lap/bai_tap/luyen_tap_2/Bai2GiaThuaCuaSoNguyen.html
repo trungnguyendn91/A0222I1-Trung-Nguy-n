@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giai Thua Cua So Nguyen Duong</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("enter number"));
+    let giaithua = 1
+        if (n==0 || n==1){
+            giaithua = 1
+            document.write( giaithua);
+        }else if(n<0) {
+            document.write('wrong');
+        }else {
+            for (i=1; i<=n ; i++){
+            giaithua= giaithua * i;
+         }
+            document.write(giaithua);
+        }
+</script>
+</body>
+</html>

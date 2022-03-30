@@ -5,6 +5,15 @@
     <title>Lãi suất ngân hàn</title>
 </head>
 <body>
-
+<script>
+    let a = parseFloat(prompt('Số tiền đóng vào'));
+    let r = 0.8
+    let time = prompt("Số tháng ");
+     n = 12;
+     for (i=1; i<=time ; i++){
+         total = a + (a*r/100)*i;
+     }
+     document.write('tổng số tiền cả gốc và lãi=' + total);
+</script>
 </body>
 </html>
