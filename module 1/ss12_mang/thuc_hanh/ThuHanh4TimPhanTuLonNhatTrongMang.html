@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm phần tử lớn nhất</title>
+</head>
+<body>
+<script>
+    //Khai báo mảng x và khởi tạo giá trị ban đầu cho mảng
+    let x = [1, 5,-2, 10,6];
+    //Khai báo biến max để lưu giá trị lớn nhất mặc định là phần tử đầu tiên trong mảng
+    let max = x [0];
+    //Khai báo biến index mặc định gán giá trị 0 để lưu chỉ số của phần tử lớn nhất trong mảng
+    let index = 0
+    //Dùng vòng lặp duyệt toàn bộ mảng x từ phần tử tiếp theo đến hết mảng.
+    // Kiểm tra nếu một phần tử trong mảng x có giá trị lớn hơn max
+    // thì gán max chính là phần tử đó và gán index bằng vị trí của phần tử đó.
+    for (let i = 0; i<= x.length; i++){
+        if (x[i] > max){
+            max = x[i]
+            index = i
+        }document.write("max: " + max + " tại vị trí " + index);
+    }
+</script>
+
+</body>
+</html>

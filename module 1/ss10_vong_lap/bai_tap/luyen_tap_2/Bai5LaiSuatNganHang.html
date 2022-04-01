@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lai Suat Ngan Hang</title>
+</head>
+<body>
+<script>
+    let money = parseInt(prompt("Nhap so tien gởi"));
+    let month = parseInt(prompt('So thang'));
+    let lai = 0.8
+    for (let i = 1
+        ; i<= month ; i++){
+       let tienLai_thang = money*lai/100;
+        money = money + tienLai_thang*month
+    }document.write(" tong tien lai va goc trong " + month + ' thang voi lai suat ' + lai + '% thang la ' + money + ' VND')
+
+</script>
+</body>
+</html>

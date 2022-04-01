@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tro Choi Doan So</title>
+</head>
+<body>
+<script>
+    let canDuoi = parseInt(prompt("Nhap So Can Duoi"));
+    let canTren = parseInt(prompt("Nhap So Can Tren"));
+    /*
+  * Math.random()
+  * 0 ~ 0.00001
+  * 1 ~ 0.999*/
+    let random = Math.floor(Math.random()*( canTren - canDuoi)+canDuoi);
+    let dem = 0
+    do {
+        let a = parseInt(prompt('Nhap so '));
+        if (random == a){
+            alert("Chuc Mung Doan Dung");
+            break;
+        }else if ( random < a){
+            alert("So ban nhap lon hon");
+            dem++;
+        }else {
+            alert("So ban nhap nho hon");
+            dem++
+        }
+        if (dem >=3){
+            alert("ban het luot choi");
+            break;
+        }
+    } while (true);
+
+
+
+</script>
+</body>
+</html>
