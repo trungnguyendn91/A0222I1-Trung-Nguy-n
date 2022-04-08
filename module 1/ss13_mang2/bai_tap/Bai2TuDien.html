@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ Điển</title>
+</head>
+<body>
+<label for="inputEng">Input:</label>
+<input id="inputEng" type="text">
+<button onclick="searchVN()">Search</button>
+<p id="result"></p>
+<script>
+    let arrEng = ['Hello', 'House', 'People', 'Name']
+    let arrVN = ['Xin Chào', 'Ngôi Nhà', 'Con Người', 'Tên']
+    function searchVN() {
+        let result = ' ';
+        let keyWord = document.getElementById('inputEng').value;
+        let index = arrEng.indexOf(keyWord)
+        if (index!= -1){
+            result = arrVN[index];
+        }else {
+            result = "Not found..."
+        }
+        document.getElementById('result').innerHTML = result;
+}
+</script>
+</body>
+</html>

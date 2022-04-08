@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3 In Giá Trị Trung Bình Của Các Phần Tử Trong Mảng</title>
+</head>
+<body>
+<script>
+    let num= [12, 25, 16, 17, 5, 4,21, 27,6,22,8];
+    let max = num[0]
+    let total=0
+    let count = 0
+    for (let i= 0; i<num.length; i++){
+        if(num[i] > max){
+            max = num[i]
+        }
+        total= total+num[i]
+        count++
+    }
+    document.write('cho dãy số '+ num +'<br>');
+    document.write('số lớn nhất là '+ max +'<br>');
+    document.write('tổng các số trong dãy là  '+ total +'<br>');
+    document.write('số lượng các phần tử trong dãy là:  '+ count +'<br>');
+    document.write('giá trị trung bình của dãy só là '+ (total/count));
+</script>
+</body>
+</html>

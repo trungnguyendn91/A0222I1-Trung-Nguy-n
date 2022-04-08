@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi met và feed</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Amount</td>
+        <td>From Currency</td>
+        <td>To Currency</td>
+    </tr>
+    <tr>
+        <td><input id="vao" type="text"></td>
+        <td><select id="from1" style="width: 80px">
+            <option value="metter">met</option>
+            <option value="foot">feet</option>
+        <td><select id="from2" style="width: 80px">
+        <option value="metter">met</option>
+        <option value="foot">feet</option>
+        </select></td>
+        <td><button onclick="submit()">đổi</button></td>
+    </tr>
+</table>
+<p>result: <span id="result"></span></p>
+<script>
+    function submit() {
+
+        let inputValue = document.getElementById('vao').value;
+        let from1 = document.getElementById('from1').value;
+        let from2 = document.getElementById('from2').value;
+        if (from1 == from2){
+            document.getElementById('result').innerHTML=inputValue;
+        }
+        if (from1 =='metter' && from2 == 'foot') {
+            document.getElementById('result').innerHTML= inputValue * 3.279 + ' feet';}
+
+        if (from1 == 'foot' && from2 == 'metter'){
+            document.getElementById('result').innerHTML=inputValue*0.305 + ' m';
+        }
+    }
+
+</script>
+</body>
+</html>

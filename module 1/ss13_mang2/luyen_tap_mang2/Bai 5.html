@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra 2 chuỗi có giống nhau không</title>
+</head>
+<body>
+<script>
+    let arr1 = [1, 2, 3, 4, 5, 'd', 'a'];
+    let arr2 = [1, 2, 3, 4, 5, 'd', 'a'];
+    document.write("cho chuỗi 1 : " + arr1 + '<br>')
+    document.write("cho chuỗi 2 : " + arr2 + '<br>')
+    let flg = false
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] == arr2[i]) {
+            flg = true;
+            } else {
+            flg = false;
+                break;
+            }
+
+    }
+    if (flg==true ) {
+        document.write('2 chuỗi  giống nhau');
+    } else {
+        document.write('2 chuỗi khác nhau');
+    }
+</script>
+
+</body>
+</html>

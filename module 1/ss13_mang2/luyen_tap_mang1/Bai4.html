@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4 đảo ngược mảng</title>
+</head>
+<body>
+<script>
+    let num= [12, 25, 16, 17, 5, 4,21, 27,6,22,8];
+    let first = 0;
+    let last = num.length-1;
+    document.write(num + '<br>');
+    while (first<last){
+        let b = num[first]
+        num[first] = num[last]
+        num[last]=b
+        first++
+        last--
+    }document.write(num)
+
+</script>
+</body>
+</html>

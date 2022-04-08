@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm tất cả ký tự '-' thay bằng '_'</title>
+</head>
+<body>
+<script>
+
+    let string = prompt('Nhap 1 cau')
+    let array = string.split(' ');
+    document.write('cho câu:  ' + array.join(' ')+ '<br>')
+
+    for(let i=0; i<=array.length; i++){
+        if(array[i]== '-'){
+            array[i]= '_';
+        }
+
+    }document.write('câu sau khi sửa:  ' + array.join(' '));
+
+</script>
+</body>
+</html>

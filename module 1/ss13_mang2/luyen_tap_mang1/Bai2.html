@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số lớn nhất trong mảng và vị trí của nó.</title>
+</head>
+<body>
+<script>
+    let num= [12, 25, 16, 17, 5, 4,21, 27,6,22,8];
+    let max = num[0]
+    for (let i= 0; i<num.length; i++){
+        if(num[i] > max){
+            max = num[i]
+            index = i
+        }
+    }
+    document.write('cho dãy số' +num+ '<br>');
+    document.write("số lớn nhất là: " + max + ' vị trí thứ: ' + ++index + ' trong dãy số');
+</script>
+</body>
+</html>

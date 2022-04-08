@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số nguyên âm</title>
+</head>
+<body>
+<script>
+    //let array = [];
+    //array = prompt('Nhập dãy số')
+    let array = [7,-14,21,-5,14,16,-4,-21,-19,-3,27]
+    let count = 0
+    document.write('Cho dãy số ' + array  + '<br>');
+
+    for (let i = 0; i<array.length; i++){
+        if (array[i] < 0){
+            document.write((array[i] + ' ') + '<br>')
+            count++
+        }
+    }
+    document.write('số lượng các số nguyên âm trong dãy là ' + count + ' số');
+
+</script>
+</body>
+</html>
