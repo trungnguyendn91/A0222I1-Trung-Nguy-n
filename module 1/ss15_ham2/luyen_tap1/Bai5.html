@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chòm Sao</title>
+</head>
+<body>
+<script>
+    let  n = prompt('nhập tên ngôi sao')
+    function find(n) {
+        let star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let group = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        for (let i = 0; i <= star.length; i++) {
+            if (n == star[i]) {
+
+               return group[i]
+            }
+        }return (alert('không tìm thấy'))
+    }
+    let x = find(n);
+    document.write('ngôi sao ' + n +' thuộc chòm ' +x)
+</script>
+</body>
+</html>
