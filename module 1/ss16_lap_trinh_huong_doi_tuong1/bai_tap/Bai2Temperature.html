@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<script>
+    let c = parseInt(prompt(' nhập độ c'))
+    class Temperature {
+        constructor(c) {
+            this.c = c
+        }
+        getDoC() {
+            return this.c
+        }
+        getDoF() {
+            return this.c * 1.8000+32.00
+        }
+        getDoK(){
+            return this.c +  273.15
+        }
+    }
+    let DoC = new Temperature(c)
+    document.write('Độ C = ' + DoC.getDoC()+ ' C' +'<br>')
+    document.write('Độ F = ' + DoC.getDoF()+ ' F' +'<br>')
+    document.write('Độ K = ' + DoC.getDoK()+ ' K' +'<br>')
+</script>
+</body>
+</html>

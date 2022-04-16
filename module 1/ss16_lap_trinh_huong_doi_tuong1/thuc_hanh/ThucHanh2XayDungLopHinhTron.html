@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây Dựng Lớp Hình Tròn</title>
+</head>
+<body>
+<script>
+    class HinhTron{
+        constructor(radius) {
+            this.radius = radius;
+        }
+        get getRadius(){
+            return this.radius;
+        }
+        get getArea(){
+            return Math.PI * this.radius * this.radius;
+        }
+    }
+    let x = prompt('nhập bán kính');
+    let circle = new HinhTron(x);
+    document.write("radius: " + circle.getRadius  + '<br>' + " area: " + circle.getArea)
+
+
+
+</script>
+
+</body>
+</html>

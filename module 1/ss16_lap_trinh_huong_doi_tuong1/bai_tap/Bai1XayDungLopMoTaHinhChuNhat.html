@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<!--<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;"></canvas>-->
+<script>
+    class Rectangle{
+        constructor(length,width) {
+            /*this.x = x;
+            this.y = y;*/
+            this.l = length;
+            this.w = width;
+        }
+        get getlength(){
+            return this.l
+        }
+        set setlength(dai){
+            this.l = dai
+        }
+        get getwidth(){
+            return this.w
+        }
+        set setwidth(rong){
+            this.w = rong
+        }
+        getDienTich(){
+            return  this.l * this.w
+        }
+        getChuVi(){
+            return (this.l + this.w)*2
+        }
+    }
+    let rectangle = new  Rectangle(20, 40)
+    document.write('Chiều dài ' + rectangle.getlength + ' m' + '<br>'+
+        'Chiều rộng '+ rectangle.getwidth +' m' + '<br> ' +
+        'diện tích hình chữ nhật: ' + rectangle.getDienTich()+ ' m2' + '<br>'
+        + "Chu vi hình chữ nhật là: " + rectangle.getChuVi() + ' m' + '<br>'+ '<br>');
+    rectangle.setlength = prompt('Nhập chiều dài mới');
+    rectangle.setwidth = prompt('Nhập chiều rộng mới ');
+    document.write('chiều dài thay đổi = '+ rectangle.getlength + ' m'+'<br>'
+    + 'chiều rộng thay đổi = ' + rectangle.getwidth + ' m'+'<br>'
+    + 'diện tích thay đổi = '+ rectangle.getDienTich()+' m2'+'<br>'
+    +'chu vi thay đổi = ' + rectangle.getChuVi()+' m');
+   /* function createRectangle() {
+        let ctx = document.getElementById("myCanvas").getContext("2d");
+        let Rectangle = new Rectangle(500, 500, 80, 100);
+        ctx.beginPath();
+        ctx.rect(Rectangle.x, Rectangle.y, Rectangle.l, Rectangle.w);
+        ctx.fill();
+    }
+    createRectangle()*/
+</script>
+</body>
+</html>
