@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ Hình</title>
+</head>
+<body>
+<p>Hình chữ nhật</p>
+<script>
+    for (let i = 0; i <= 4; i++) {
+        for (let j = 0; j <= 5; j++) {
+            if (i == 0 || i == 4 || j == 0 || j == 5) {
+                document.write('<a style="color: black">*</a>')
+            } else {
+                document.write('<a style="color: snow">*</a>');
+            }
+        }
+        document.write('<br>');
+    }
+</script>
+<p>Hình tam giác</p>
+<script>
+    for (let i = 0; i <= 5; i++) {
+        for (let j = 0; j <= i; j++) {
+            if (i == j || j == 0 || i==5) {
+                document.write('<a style="color: black">*</a>')
+            }else {
+                document.write('<a style="color: white">*</a>')
+
+            }
+
+        }
+        document.write('<br>');
+    }
+</script>
+<p>Tam giác cân</p>
+<script>
+    document.write('<div style="text-align: center">');
+
+    for (let i = 1; i <= 20; i+=2) {
+        for (let j = 1; j <= i; j++){
+            document.write('<a style="color: black">*</a>')
+        }document.write('<br>');
+    }
+    document.write('</div>')
+    document.write('<br>')
+</script>
+
+<p>Tam giác cân rỗng</p>
+<script>
+    document.write('<div style="text-align: center">');
+
+    for (let i = 1; i <= 15; i+=1) {
+        for (let j = 1; j <= i; j++){
+            if (i == j || j == 1 || i==15) {
+                document.write('<a style="color: black">*</a>')
+            }else {
+                document.write('<a style="color: white">*</a>')
+
+            }
+        }document.write('<br>');
+    }
+    document.write('</div>');
+</script>
+</body>
+</html>

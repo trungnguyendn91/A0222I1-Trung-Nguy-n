@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Thuế Thu Nhập</title>
+</head>
+<body>
+<script>
+    let a = prompt('nhập số tiền lương trước thuế');
+    switch (a>0) {
+        case a >= 15:
+            var thue = a * 20 / 100;
+            var luong = a - thue;
+            document.write('số tiền lương thực nhận là : ' + luong + ' triệu VND');
+            break;
+        case a >= 7:
+            var thue = a * 10 / 100;
+            var luong = a - thue;
+            document.write('số tiền lương thực nhận là : ' + luong + ' triệu VND');
+            break;
+        default:
+            var thue = a * 5 / 100;
+            var luong = a - thue;
+            document.write('số tiền lương thực nhận là : ' + luong + ' triệu VND');
+            break;
+
+    }
+</script>
+
+</body>
+</html>
