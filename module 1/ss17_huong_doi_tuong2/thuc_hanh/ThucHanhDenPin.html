@@ -32,7 +32,7 @@
             return this.battery
         }
         Linght(){
-            if (this.status ||this.Energy > 0){
+            if (this.status ||Battery > 0){
                 alert('Đèn sáng')
             }else {
                 alert("Không sáng")
@@ -46,7 +46,7 @@
         }
     }
     let battery = new Battery();
-    battery.setEnergy(0);
+    battery.setEnergy(-10);
 
     let flashLamp = new FlashLamp();
     flashLamp.BatteryInfor()

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Công Tắc và bóng đèn</title>
+</head>
+<body>
+<script>
+    class ElectricLamp{
+        constructor(status) {
+            this.Status = status
+        }
+        TurnOn(){
+            this.Status = SwitchButton.TurnOn();
+        }
+        TurnOff(){
+            this.Status = false;
+        }
+        Linght(){
+            if (this.Status){
+                alert('Đèn sáng');
+            }else {
+                alert('Không có điện');
+            }
+        }
+    }
+    class SwitchButton{
+        constructor(status, lamp) {
+            this.status = status
+            this.Lamp = lamp
+        }
+        TunrOn(){
+            this.status = true
+        }
+        TurnOff(){
+            this.status = false
+        }
+        ConnectToLamp(){
+            if(this.status){
+                alert('Công tắc kết nối với bóng đèn')
+            }else {
+                alert('Công tăc không kết nối với bóng đèn')
+            }
+        }
+    }
+    let congTac1 = new SwitchButton()
+    let bongDen1 = new ElectricLamp()
+    congTac1.TunrOn()
+    congTac1.ConnectToLamp()
+    bongDen1.Linght()
+
+</script>
+</body>
+</html>
