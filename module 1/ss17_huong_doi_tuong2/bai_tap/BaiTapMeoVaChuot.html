@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mèo và Chuột</title>
+</head>
+<body>
+<script>
+    class Animal{
+        constructor( name, weight, speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+        }
+        say(message){
+        }
+    }
+    class Rat extends Animal{
+        constructor(name , weight, speed, status) {
+            super(name, weight, speed);
+            this.status = status;
+        }
+        say(message){
+            console.log('chit...chit')
+        }
+    }
+    class Cat extends Animal{
+        constructor(name,weight,speed) {
+            super(name,weight,speed);
+        }
+        say(message) {
+            console.log('meo...meo')
+        }
+        eatRat(Rat){
+            if (Rat.status == 'song'){
+                this.weight += Rat.weight;
+            }
+        }
+        catchRat(Rat){
+            if (this.speed > Rat.speed){
+                this.say("bắt được rồi");
+                this.eatRat(Rat)
+            }else {
+                Rat.say('Đố băt được')
+            }
+        }
+    }
+    let mickey = new Rat('Mickey', 20, 15, 'song');
+    let mun = new Cat('Mun', 29, 11);
+    mun.catchRat(mickey);
+    console.log(mun.weight);
+</script>
+</body>
+</html>

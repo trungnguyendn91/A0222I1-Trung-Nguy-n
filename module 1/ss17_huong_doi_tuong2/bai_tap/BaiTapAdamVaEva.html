@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam và Eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor() {
+            this.weight = 10;
+        }
+        decrease(){
+            if(this.weight > 0){
+                this.weight--;
+            }
+        }
+        isEmpty(){
+            if(this.weight==0){
+                return true;
+            }
+            return false;
+        }
+        getWeight(){
+            return this.weight;
+        }
+    }
+    class Human{
+        constructor(Name, gender, weight) {
+            this.name = Name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+        isMale(){
+            if (this.gender == Male){
+                return true
+            }
+            return false
+        }
+        setGender(gender){
+            this.gender = gender;
+        }
+        checkApple(apple){
+            if (apple.isEmpty()){
+                console.log('Táo đã hết')
+                return false;
+            }else {
+                console.log('Táo còn')
+                return true;
+            }
+        }
+        eatApple(apple){
+            if (this.checkApple(apple)){
+                apple.decrease();
+                this.weight++
+            }
+        }
+        say(message){
+            console.log(this.name + ":" + message)
+        }
+        setName(name){
+            this.name = name;
+        }
+        getName(){
+            return this.name
+        }
+        setWeight(weight){
+            this.weight = weight;
+        }
+        getWeight(){
+            return this.weight;
+        }
+    }
+    let táo = new Apple();
+    let adam = new Human('ADAM', 'Male', 50);
+    let eva = new Human('EVA', 'Female', 40);
+    adam.say("Eva ăn táo đi");
+    eva.eatApple(táo);
+    eva.eatApple(táo);
+    eva.say("Anh cũng ăn đi.");
+    adam.eatApple(táo);
+    adam.eatApple(táo);
+    adam.eatApple(táo);
+    console.log('trọng lượng adam: ' + adam.getWeight());
+    console.log('trọng lượn eva: ' + eva.getWeight());
+</script>
+</body>
+</html>

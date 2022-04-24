@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu đồ uống</title>
+</head>
+<body>
+<p><b>Menu</b><br>
+    <b>1. Cafe </b><br>
+    <b>2. Nước ép carot </b><br>
+    <b>3. Nước ép cà chua </b><br>
+    <b>4. Cam vắt </b><br>
+    <b>5. Nước dừa </b><br>
+    <b>6. Nước lọc </b><br>
+
+</p>
+<script>
+    let a = null
+    let b = 0
+    let tong1 = 0;
+    let tong2 = 0;
+    let tong3 = 0;
+    let tong4 = 0;
+    let tong5 = 0;
+    let tong6 = 0;
+    let tongTien = 0;
+
+    do {
+        a = prompt('Nhập số thứ tự của đồ uống \n' +
+            '       MENU \n' +
+            '    1. Cafe \n' +
+            '    2. Nước ép carot \n' +
+            '    3. Nước ép cà chua \n' +
+            '    4. Cam vắt \n' +
+            '    5. Nước dừa \n' +
+            '    6. Nước lọc \n' +
+            '    7. Thoát \n');
+        if (a==7){
+            alert("Cam on ban da dat mon. Xin chao va hen gap lai");
+            break;
+        };
+        if (a == 1) {
+            b = prompt('Nhập số lượng');
+            tong1 = 15000*b;
+            alert(b +' Cafe = ' + tong1)
+            //document.write(b + ' Cafe = 15.000vnd'+'<br>')
+        }
+        else if (a == 2) {
+            b = prompt('Nhập số lượng');
+            tong2 = 25000*b
+            alert(b +' Nước ép carot = '+ tong2)
+            //document.write(b + ' Nước ép carot = 25.000vnd'+'<br>')
+        }
+        else if (a == 3) {
+            b = prompt('Nhập số lượng');
+            tong3 = 25000*b
+            alert(b +' Nước ép cà chua = ' + tong3)
+            //documeyNước dừa = ' + tong5)
+            //document.write(b + 'Nước dừa = 30.000'+'<br>')
+        }
+        else if (a == 6) {
+            b = prompt('Nhập số lượng');
+            tong6 = 10000*b
+            alert(b + ' nước lọc = '+ tong6)
+            //document.write(b + 'nước lọc = 10.000vnd'+'<br>')
+        }
+    }while (true);
+    tongTien = tong1 + tong2 + tong3 + tong4 + tong5 + tong6;
+    document.write('tông số tiền: ' + tongTien + 'VND');
+
+</script>
+</body>
+</html>
