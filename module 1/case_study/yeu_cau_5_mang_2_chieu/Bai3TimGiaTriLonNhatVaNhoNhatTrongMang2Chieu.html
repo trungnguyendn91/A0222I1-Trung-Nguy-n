@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị nhỏ nhất và lớn nhất trong mảng 2 chiều</title>
+</head>
+<body>
+<script>
+    let m = parseInt(prompt('Nhập số dòng của ma trận'));
+    let n = parseInt(prompt('Nhập số cột của ma trận'));
+    let maTran =[];
+    for (let i =0; i<m;i++){
+        let row = [];
+        for (let j=0; j<n; j++){
+            row[j] = parseInt(prompt('Nhập số vào ma trận'));
+        }
+        maTran[i] = row;
+    }
+    function maxAndMin(maTran) {
+        let max = maTran[0][0];
+        let min = maTran[0][0];
+        for (let i = 0; i<maTran.length ;i++){
+            for (let j=0; j< maTran[i].length; j++){
+                if (maTran[i][j] > max){
+                    max = maTran[i][j];
+                }
+                if(maTran[i][j] < min){
+                    min = maTran[i][j];
+                }
+            }
+        }
+        document.write("số lớn nhất trong mảng là: " + max +'<br>'
+        + 'số nhỏ nhất là: ' + min)
+    }
+
+maxAndMin(maTran)
+</script>
+
+</body>
+</html>

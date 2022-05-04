@@ -5,6 +5,42 @@
     <title>Bai 1</title>
 </head>
 <body>
-
+<script>
+    function standard(name) {
+        name = name.trim().toLowerCase();
+        let nameArray = Array.from(name);
+        for (let i=0; i< nameArray.length-1; i++){
+            if(nameArray[i]===" " && nameArray[i+1]===" "){
+                for (let j = i+1; j<nameArray.length-1; j++){
+                    nameArray[i+1]=nameArray[j+1];
+                }
+                i--;
+                nameArray.pop();
+            }
+        }
+        nameArray[0] = nameArray[0].toUpperCase();
+        for (let i=0; i< nameArray.length-1; i++){
+            if (nameArray[i]===" "){
+                nameArray[i+1] = nameArray[i+1].toUpperCase();
+            }
+        }
+        return nameArray.join('');
+    }
+    function maxLength(name) {
+        let arrName = name.split(" ");
+        let maxName = arrName[0];
+        for (let i=1 ; i<arrName.length; i++){
+            if(maxName.length < arrName[i].length){
+                maxName = arrName[i];
+            }
+        }
+        return maxName
+    }
+    let name = prompt('Nhập tên: ');
+    let standardName = standard(name)
+    document.write('tên ban đầu là: '+ name +'<br>'+
+    'tên sửa lại là: '+ standard(name) + '<br>' +
+    'Từ có độ dài nhất là: ' + maxLength(standardName))
+</script>
 </body>
 </html>
