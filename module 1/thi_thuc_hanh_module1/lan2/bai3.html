@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<style>
+    table tr td {
+        width: 500px;
+    }
+</style>
+<p id="displayTable"></p>
+<br>
+<button onclick="addBook()">Thêm sách</button>
+<script>
+    let listBook = [["1234", "văn", '2002',4,true]];
+
+    function displayPhone(listOfBook) {
+        let display =
+            '<table border="1" class="table-book">' +
+            "<tr>" +
+            "<th>Mã số sách</th>" +
+            "<th>Tên sách</th>" +
+            "<th>Năm sản xuất</th>" +
+            "<th>Số quyển</th>" +
+            "<th>Tình trạng</th>" +
+
+            "</tr>";
+        for (let i = 0; i < listOfBook.length; i++) {
+            display += "<tr>";
+            for (let j = 0; j < listOfBook[i].length; j++) {
+                display += "<td>" + listOfBook[i][j] + "</td>";
+            }
+            display += "</tr>";
+        }
+        display += "</table>";
+        document.getElementById("displayTable").innerHTML = display;
+    }
+    displayPhone(listBook);
+    class Book {
+        constructor(code,name,year,quantity,status) {
+            this.code = code;
+            this.name = name;
+            this.year = year;
+            this.quantity = quantity;
+            this.status = status;
+        }
+
+        get getCode() {
+            return this.code;
+        }
+        get getName() {
+            return this.name;
+        }
+        get getYear() {
+            return this.year;
+        }
+        get getQuantity() {
+            return this.quantity;
+        }
+        get getStatus() {
+            return this.status;
+        }
+        set setCode(code) {
+            this.code = code;
+        }
+        set setName(name) {
+            this.name = name;
+        }
+        set setYear(year) {
+            this.year= year;
+        }
+        set setQuantity(quantity) {
+            this.quantity = quantity;
+        }
+        set setStatus(status) {
+            this.status = status;
+        }
+
+    }
+    let book = new Book()
+    function addBook() {
+        let arrBook = []
+        book.setCode = prompt("Nhập mã sách");
+        book.setName = prompt("Nhập tên Sách");
+        book.setYear = Number(prompt("Nhập Năm"));
+        book.setQuantity = Number(prompt("Nhập số lượng sách"));
+        book.setStatus = confirm("Trạng Thái")
+        arrBook.push(book.code);
+        arrBook.push(book.name);
+        arrBook.push(book.year);
+        arrBook.push(book.quantity);
+        arrBook.push(book.status);
+        listBook.push(arrBook)
+        displayPhone(listBook);
+
+    }
+</script>
+</body>
+</html>
