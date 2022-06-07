@@ -11,7 +11,7 @@ public class BMI {
         System.out.print("Enter your height (meter): ");
         height = scanner.nextDouble();
         bmi = weight / Math.pow(height,2);
-        System.out.printf("%-20%s", "bmi", "Interpretation\n");
+        System.out.printf("%-20%s", bmi, "Interpretation");
         if (bmi <18 ){
             System.out.printf("%-20.2f%s", bmi, "Underweight ");
         }else if (bmi<25.0){
